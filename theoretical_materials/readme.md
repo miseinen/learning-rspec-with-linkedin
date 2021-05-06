@@ -27,3 +27,5 @@ expect(x).to eql(1)    <i>#x.eql?(1)</i>
 expect(x).to equal(1)  <i>#x.equal?(1)</i>
 expect(x).to be(1)     <i>#x.equal?(1)</i> 
 </pre>
+
+Code example: [ **expectation_matchers_spec.rb** ](https://github.com/miseinen/learning-rspec-with-linkedin/blob/main/car_project/spec/expectation_matchers_spec.rb)
