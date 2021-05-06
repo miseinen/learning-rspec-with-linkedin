@@ -6,9 +6,10 @@ require 'car'
 describe 'Car' do
   # nested example groups
 
-  # attributes
+  # test attributes
   describe 'attributes' do
-    it 'allows reading and writing for :make' do
+    # skip example by xit
+    xit 'allows reading and writing for :make' do
       car = Car.new
       car.make = 'Test'
       expect(car.make).to eq('Test')
@@ -30,24 +31,32 @@ describe 'Car' do
       car = Car.new
       expect(car.wheels).to eq(4)
     end
+
+    # pending
+    it 'allows writing for :doors'
   end
 
-  # class method
-  describe '.colors' do
+  # test class method
+  # skip group by xdescribe
+  xdescribe '.colors' do
     it 'returns an array of color names' do
       c = %w[blue black red yellow]
       expect(Car.colors).to match_array(c)
     end
   end
 
-  # instance method
+  # test instance method
   describe '#full_name' do
     it 'returns a string in the expected format' do
+      # skip inside example
+      skip('Skip example')
       @honda = Car.new(make: 'Honda', year: 2004, color: 'blue')
       expect(@honda.full_name).to eq('2004 Honda (blue)')
     end
 
     context 'when initialized with no arguments' do
+      # pending inside example
+      pending('Append description by pending')
       it 'return a string using default values' do
         car = Car.new
         expect(car.full_name).to eq('2007 Volvo (unknown)')
