@@ -31,11 +31,11 @@ describe 'complex expectations' do
     it 'will match using non_phrase aliases for matchers' do
       fruits = %w[apple banana orange]
       expect(fruits).to start_with(start_with('a')).and include(match(/.a.a.a/)) &
-      end_with(end_with('e'))
+                                                        end_with(end_with('e'))
 
       expect(fruits).to start_with(a_string_starting_with('a')) &
-      include(a_string_matching(/.a.a.a/)) &
-      end_with(a_string_ending_with('e'))
+                        include(a_string_matching(/.a.a.a/)) &
+                        end_with(a_string_ending_with('e'))
 
       array = [1, 2, 3]
       expect(array).to start_with(be > 0) | end_with(be_within(1).of(5))

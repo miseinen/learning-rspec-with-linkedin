@@ -38,4 +38,3 @@ describe 'collections matchers' do
     expect(hash).not_to include(one: 2)
   end
 end
-
