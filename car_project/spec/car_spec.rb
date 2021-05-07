@@ -2,13 +2,14 @@
 
 require 'car'
 
-# example group
-describe 'Car' do
-  # nested example groups
+# example group:
+# using class name allows to declare 'subject' variable implicitly
+describe Car do
+  # nested example groups:
 
   # test attributes
   describe 'attributes' do
-    # what 'let' do automatically
+    # what 'let' do automatically:
     # before(:example) do # before 'it' blocks
     #   def car
     #     @car ||= Car.new
@@ -18,7 +19,8 @@ describe 'Car' do
     # 'let' is better than 'before' for setting up instance variables
     # 'subject' is the same as let(:subject)
     # use 'subject' instead of 'let' if variable is a subject of example
-    subject { Car.new } # lazy execution; 'subject!' (or 'let!') is eager execution
+    # using class name as 'describe' name allows to omit following declaration
+    # subject { Car.new } # lazy execution; 'subject!' (or 'let!') is eager execution
 
     # skip example by xit
     xit 'allows reading and writing for :make' do
