@@ -1,6 +1,6 @@
 ### Expectations matchers
 
-This folder contains various **spec files** where reviewed different syntaxes and approaches to write **expect** phrases.
+This folder contains various **spec files** where different syntaxes and approaches to write **expect** phrases are reviewed.
 
 - [Matchers for collections](https://github.com/miseinen/learning-rspec-with-linkedin/blob/main/expectations_matchers_project/spec/collections_matchers_spec.rb)
 - [Complex expectations](https://github.com/miseinen/learning-rspec-with-linkedin/blob/main/expectations_matchers_project/spec/complex_expectations_spec.rb): compound expectations and composing matchers
