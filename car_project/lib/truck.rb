@@ -1,22 +1,23 @@
 # frozen_string_literal: true
 
-class Car
+# copy of class Car for shared_examples demonstration
+class Truck
   attr_accessor :make, :year, :color
   attr_reader :wheels
   attr_writer :door
 
   def initialize(options = {})
-    self.make = options[:make] || 'Volvo'
+    self.make = options[:make] || 'Ford'
     self.year = (options[:year] || '2007').to_i
     self.color = options[:color] || 'unknown'
     @wheels = 4
   end
 
   def self.colors
-    %w[blue black red yellow]
+    %w[blue black red yellow white]
   end
 
   def full_name
-    "#{year} #{make} (#{color})"
+    "#{year} #{make} Truck (#{color})"
   end
 end

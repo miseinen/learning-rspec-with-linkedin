@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 
 require 'car'
+require 'shared_examples/a_standard_vehicle'
 
 # example group:
 # using class name allows to declare 'subject' variable implicitly
 describe Car do
+  it_behaves_like('a standard vehicle')
   # nested example groups:
 
   # test attributes
-  describe 'attributes' do
+  # describe 'attributes' do
     # what 'let' do automatically:
     # before(:example) do # before 'it' blocks
     #   def car
@@ -23,28 +25,14 @@ describe Car do
     # subject { Car.new } # lazy execution; 'subject!' (or 'let!') is eager execution
 
     # skip example by xit
-    xit 'allows reading and writing for :make' do
-      subject.make = 'Test'
-      expect(subject.make).to eq('Test')
-    end
-
-    it 'allows reading and writing for :year' do
-      subject.year = 9999
-      expect(subject.year).to eq(9999)
-    end
-
-    it 'allows reading and writing for :color' do
-      subject.color = 'foo'
-      expect(subject.color).to eq('foo')
-    end
-
-    it 'allows reading for :wheels' do
-      expect(subject.wheels).to eq(4)
-    end
+    # xit 'allows reading and writing for :make' do
+    #   subject.make = 'Test'
+    #   expect(subject.make).to eq('Test')
+    # end
 
     # pending
-    it 'allows writing for :doors'
-  end
+    # it 'allows writing for :doors'
+  # end
 
   # test class method
   # skip group by xdescribe
