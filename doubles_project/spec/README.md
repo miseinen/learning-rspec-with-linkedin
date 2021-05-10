@@ -1,6 +1,6 @@
 ### Using doubles
 
-This folder contains various **spec files** where different syntaxes and approaches to use **doubles** phrases are reviewed.
+This folder contains various **spec files** where different syntaxes and approaches to use **doubles** are reviewed.
 
 - [Arguments constraints](https://github.com/miseinen/learning-rspec-with-linkedin/blob/main/doubles_project/spec/arguments_constraints_spec.rb)
 - [Doubles](https://github.com/miseinen/learning-rspec-with-linkedin/blob/main/doubles_project/spec/doubles_spec.rb)
